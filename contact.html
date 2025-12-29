@@ -111,41 +111,42 @@
 </div>
 <div class="w-full max-w-4xl bg-white dark:bg-[#1a232e] rounded-2xl shadow-xl border border-[#f0f2f4] dark:border-[#2a3441] overflow-hidden">
 <div class="p-6 md:p-10 lg:p-12">
-<form class="flex flex-col gap-8">
+<form action="send-mail.php" method="POST" class="flex flex-col gap-8">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <label class="flex flex-col gap-2">
 <span class="text-sm font-bold text-[#111418] dark:text-white">Full Name</span>
-<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="John Doe" type="text"/>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="John Doe" type="text" name="name" required/>
 </label>
 <label class="flex flex-col gap-2">
 <span class="text-sm font-bold text-[#111418] dark:text-white">Phone Number</span>
-<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="+1 (555) 000-0000" type="tel"/>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="+1 (555) 000-0000" type="tel" name="phone" required/>
 </label>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <label class="flex flex-col gap-2">
 <span class="text-sm font-bold text-[#111418] dark:text-white">Email Address</span>
-<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="john@example.com" type="email"/>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="john@example.com" type="email" name="email" required/>
 </label>
 <label class="flex flex-col gap-2">
 <span class="text-sm font-bold text-[#111418] dark:text-white">Project Location</span>
-<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="City, Country" type="text"/>
+<input class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400" placeholder="City, Country" type="text" name="project_location"/>
 </label>
 </div>
 <label class="flex flex-col gap-2">
 <span class="text-sm font-bold text-[#111418] dark:text-white">Type of Service</span>
-<select class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary">
+<select class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary" name="service_type">
 <option disabled="" selected="" value="">Select a service</option>
 <option>Interior Design</option>
 <option>Exterior Design</option>
 <option>Architectural Planning</option>
 <option>Renovation</option>
 <option>Consultation</option>
+<option>Others</option>
 </select>
 </label>
 <label class="flex flex-col gap-2">
 <span class="text-sm font-bold text-[#111418] dark:text-white">Message</span>
-<textarea class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400 resize-none" placeholder="Tell us more about your project goals, timeline, and any specific requirements..." rows="5"></textarea>
+<textarea class="w-full rounded-lg border-gray-200 dark:border-gray-700 bg-background-light dark:bg-[#111920] px-4 py-3 text-base text-[#111418] dark:text-white focus:border-primary focus:ring-primary placeholder-gray-400 resize-none" placeholder="Tell us more about your project goals, timeline, and any specific requirements..." rows="5" name="message"></textarea>
 </label>
 <div class="pt-2">
 <button class="w-full md:w-auto px-10 py-4 bg-primary hover:bg-primary/90 text-white font-bold text-lg rounded-lg transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2" type="submit">
@@ -175,7 +176,7 @@
 </div>
 <div>
 <h3 class="font-bold text-[#111418] dark:text-white">Email Us</h3>
-<p class="text-sm text-[#637588] dark:text-gray-400">vastuveda.design@gmail.com</p>
+<p class="text-sm text-[#637588] dark:text-gray-400">contact@vastuvedadesigns.com</p>
 </div>
 </div>
 <div class="flex flex-col items-center text-center gap-3 p-6 rounded-xl bg-white dark:bg-[#1a232e] border border-transparent hover:border-gray-100 dark:hover:border-gray-800 transition-colors">
@@ -184,7 +185,7 @@
 </div>
 <div>
 <h3 class="font-bold text-[#111418] dark:text-white">Visit Us</h3>
-<p class="text-sm text-[#637588] dark:text-gray-400">123 Design Avenue, City</p>
+<p class="text-sm text-[#637588] dark:text-gray-400">Chabahil, Kathmandu</p>
 </div>
 </div>
 </div>
