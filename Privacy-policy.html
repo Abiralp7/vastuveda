@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Privacy Policy - VastuVeda Designs</title>
+<link rel="icon" type="image/png" href="Company-logo.webp">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased min-h-screen flex flex-col">
+<!--Header -->
+        <!-- Top Navigation -->
+<header class="w-full bg-white border-b border-[#f0f2f4]">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <!-- LOGO -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="Company-logo.webp" alt="VastuVeda Logo" class="h-10 w-auto">
+      <span class="text-lg font-bold text-[#111418]">
+        VastuVeda Designs
+      </span>
+    </a>
+
+    <!-- DESKTOP NAV -->
+    <div class="hidden md:flex items-center gap-8">
+      <nav class="flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services" class="nav-link">Services</a>
+        <a href="packages" class="nav-link">Packages</a>
+        <a href="about" class="nav-link">About</a>
+        <a href="contact" class="nav-link">Contact</a>
+      </nav>
+
+      <a href="consult"
+         class="h-10 px-6 flex items-center justify-center bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition">
+        Request Consultation
+      </a>
+    </div>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button onclick="toggleMenu()" class="md:hidden">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <nav class="flex flex-col">
+      <a href="index.html" class="px-6 py-4">Home</a>
+      <a href="services" class="px-6 py-4">Services</a>
+      <a href="packages" class="px-6 py-4">Packages</a>
+      <a href="about" class="px-6 py-4">About</a>
+      <a href="contact" class="px-6 py-4">Contact</a>
+    </nav>
+
+    <div class="p-4">
+      <a href="consult"
+         class="flex h-12 bg-primary text-white font-bold items-center justify-center rounded-xl">
+        Request Consultation
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content Layout -->
+<main class="flex-grow w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-12 py-10 lg:py-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Sidebar Navigation (Sticky) -->
+<aside class="hidden lg:block lg:col-span-3">
+<div class="sticky top-28 bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4">Contents</h3>
+<nav class="flex flex-col space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary font-semibold border-l-2 border-primary" href="#introduction">
+<span>Introduction</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors" href="#collection">
+<span>Information Collection</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors" href="#usage">
+<span>How We Use Data</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors" href="#storage">
+<span>Storage &amp; Security</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors" href="#disclosure">
+<span>Third-Party Disclosure</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors" href="#rights">
+<span>Your Rights</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors" href="#contact">
+<span>Contact Us</span>
+</a>
+</nav>
+</div>
+</aside>
+<!-- Main Document -->
+<div class="col-span-1 lg:col-span-9">
+<div class="bg-white dark:bg-slate-900 rounded-xl p-8 md:p-12 shadow-sm border border-slate-200 dark:border-slate-800">
+<!-- Page Heading -->
+<div class="border-b border-slate-100 dark:border-slate-800 pb-8 mb-10">
+<h1 class="text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-4">Privacy Policy</h1>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm font-medium">
+<span class="material-symbols-outlined text-base">calendar_today</span>
+<p>Effective Date: October 24, 2023</p>
+</div>
+</div>
+<!-- Introduction -->
+<section class="mb-12 scroll-mt-32" id="introduction">
+<p class="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+                            At VastuVeda Designs, we believe that trust is the foundation of any great design. This Privacy Policy outlines our commitment to protecting the privacy and personal information of our clients, partners, and website visitors. We are dedicated to transparency in how we collect, use, and safeguard your data as we work together to bring architectural visions to life.
+                        </p>
+</section>
+<!-- 1. Information Collection -->
+<section class="mb-12 scroll-mt-32" id="collection">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="text-primary">1.</span> Information We Collect
+                        </h2>
+<div class="space-y-4 text-base leading-relaxed text-slate-600 dark:text-slate-300">
+<p>
+                                We collect various types of information to provide and improve our services to you:
+                            </p>
+<ul class="list-disc pl-5 space-y-2 marker:text-primary">
+<li>
+<strong class="text-slate-900 dark:text-white">Personal Information:</strong> When you inquire about a project, sign up for our newsletter, or contact us, we may collect personal details such as your name, email address, phone number, and property location.
+                                </li>
+<li>
+<strong class="text-slate-900 dark:text-white">Project Data:</strong> For client projects, we collect specific architectural requirements, site surveys, blueprints, and budget constraints necessary for design delivery.
+                                </li>
+<li>
+<strong class="text-slate-900 dark:text-white">Usage Data:</strong> We automatically collect information on how the Service is accessed and used. This Usage Data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, and the pages of our Service that you visit.
+                                </li>
+</ul>
+</div>
+</section>
+<!-- 2. Data Usage -->
+<section class="mb-12 scroll-mt-32" id="usage">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="text-primary">2.</span> How We Use Your Data
+                        </h2>
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300 mb-4">
+                            VastuVeda Designs uses the collected data for various purposes:
+                        </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">design_services</span>
+<h3 class="font-bold text-slate-900 dark:text-white">Service Delivery</h3>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">To provide and maintain our Service, including monitoring the usage of our Service and managing your project.</p>
+</div>
+<div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-lg border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary">mail</span>
+<h3 class="font-bold text-slate-900 dark:text-white">Communication</h3>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400">To contact you regarding updates, informative communications related to the functionalities, or contracted services.</p>
+</div>
+</div>
+</section>
+<!-- 3. Storage & Security -->
+<section class="mb-12 scroll-mt-32" id="storage">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="text-primary">3.</span> Storage &amp; Security
+                        </h2>
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300 mb-4">
+                            The security of your data is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
+                        </p>
+<div class="bg-blue-50 dark:bg-primary/10 border-l-4 border-primary p-4 rounded-r-lg">
+<p class="text-sm text-slate-700 dark:text-slate-200">
+<strong class="font-bold">Note on Project Files:</strong> Architectural blueprints and sensitive client site data are stored on encrypted servers with restricted access limited to the project team.
+                            </p>
+</div>
+</section>
+<!-- 4. Third-Party Disclosure -->
+<section class="mb-12 scroll-mt-32" id="disclosure">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="text-primary">4.</span> Third-Party Disclosure
+                        </h2>
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                            We do not sell, trade, or otherwise transfer to outside parties your Personally Identifiable Information unless we provide users with advance notice. This does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep this information confidential. We may also release information when it's release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property or safety.
+                        </p>
+</section>
+<!-- 5. Your Rights -->
+<section class="mb-12 scroll-mt-32" id="rights">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
+<span class="text-primary">5.</span> Your Rights
+                        </h2>
+<p class="text-base leading-relaxed text-slate-600 dark:text-slate-300 mb-4">
+                            Depending on your location, you may have the following rights regarding your personal data:
+                        </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                The right to access
+                            </li>
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                The right to rectification
+                            </li>
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                The right to erasure
+                            </li>
+<li class="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-green-500 text-sm">check_circle</span>
+                                The right to restrict processing
+                            </li>
+</ul>
+</section>
+<!-- 6. Contact Us -->
+<section class="scroll-mt-32 pt-8 border-t border-slate-100 dark:border-slate-800" id="contact">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Us</h2>
+<div class="flex flex-col md:flex-row gap-6 md:gap-12">
+<div class="flex-1">
+<p class="text-slate-600 dark:text-slate-300 mb-6">
+                                    If you have any questions about this Privacy Policy, please contact us. We aim to respond to all privacy-related inquiries within 5 business days.
+                                </p>
+</div>
+<div class="flex-1 bg-background-light dark:bg-slate-800 rounded-xl p-6">
+<div class="flex flex-col gap-4">
+<div class="flex items-start gap-3">
+<div class="bg-white dark:bg-slate-700 p-2 rounded-full text-primary shrink-0">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400">Email</p>
+<a class="text-slate-900 dark:text-white font-medium hover:text-primary transition-colors" href="mailto:contact@vastuvedadesigns">contact@vastuvedadesigns.com</a>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="bg-white dark:bg-slate-700 p-2 rounded-full text-primary shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase text-slate-500 dark:text-slate-400">Office</p>
+<p class="text-slate-900 dark:text-white font-medium">Chabahil,<br/>Kathmandu, Nepal</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-[#f0f2f4]">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- TOP FOOTER -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- BRAND -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <img src="Company-logo.webp" alt="VastuVeda Logo" class="h-10 w-auto">
+          <span class="text-lg font-bold text-[#111418]">
+            VastuVeda Designs
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="border-t border-[#f0f2f4] mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+      <span>© 2024 VastuVeda. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="Privacy-policy" class="hover:text-primary">Privacy Policy</a>
+        <a href="terms" class="hover:text-primary">Terms of Service</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+</body></html>
