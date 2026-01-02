@@ -1,8 +1,73 @@
 <!DOCTYPE html>
 <html class="light" lang="en"><head>
+<meta name="description" content="Vastuveda Designs is a leading architecture and Vastu design studio in Nepal, specializing in modern home design, interior planning, and vastu-based architectural solutions." />
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>VastuVeda Designs - Home</title>
+<title>Vastuveda Designs | Architecture & Vastu Design Studio in Nepal</title>
+<link rel="canonical" href="https://vastuvedadesigns.com/" />
+<meta property="og:title" content="Vastuveda Designs | Architecture & Vastu Design Studio in Nepal">
+<meta property="og:description" content="Modern architecture, interior design, and vastu-based planning by Vastuveda Designs in Nepal.">
+<meta property="og:url" content="https://vastuvedadesigns.com/">
+
+<!-- Google Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vastuveda Designs",
+  "url": "https://vastuvedadesigns.com/",
+  "logo": "https://vastuvedadesigns.com/Company-logo.webp",
+  "image": "https://vastuvedadesigns.com/Company-logo.webp",
+  "description": "Vastuveda Designs is a Nepal-based architecture, interior design, and Vastu consultation studio offering residential and commercial design services across Nepal.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kathmandu",
+    "addressRegion": "Bagmati",
+    "addressCountry": "NP"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nepal"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Architecture & Design Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Architectural Design"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Interior Design"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vastu Consultation"
+        }
+      }
+    ]
+  },
+  "sameAs": [
+    "https://www.facebook.com/",
+    "https://www.instagram.com/",
+    "https://www.linkedin.com/"
+  ]
+}
+</script>
+
+
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="Company-logo.webp" alt="Vastuveda Designs Logo">
+
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -32,92 +97,84 @@
     </script>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
-<div class="relative w-full bg-white dark:bg-background-dark border-b border-[#f0f2f4] dark:border-[#2a3441]">
+<header class="w-full bg-white border-b border-[#f0f2f4]">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
-  <div class="px-4 md:px-10 py-3 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <span class="material-symbols-outlined text-primary text-[32px]">architecture</span>
-      <h2 class="text-lg font-bold">VastuVeda</h2>
-    </div>
+    <!-- LOGO -->
+    <a href="" class="flex items-center gap-3">
+      <img src="Company-logo.webp" alt="VastuVeda Logo" class="h-10 w-auto">
+      <span class="text-lg font-bold text-[#111418]">
+        VastuVeda Designs
+      </span>
+    </a>
 
-    <!-- Desktop Nav -->
+    <!-- DESKTOP NAV -->
     <div class="hidden md:flex items-center gap-8">
-      <nav class="flex items-center gap-6">
-        <a href="index.html" class="text-sm font-medium hover:text-primary">Home</a>
-        <a href="services.html" class="text-sm font-medium hover:text-primary">Services</a>
-        <a href="packages.html" class="text-sm font-medium hover:text-primary">Packages</a>
-        <a href="about.html" class="text-sm font-medium hover:text-primary">About</a>
-        <a href="contact.html" class="text-sm font-medium hover:text-primary">Contact</a>
+      <nav class="flex items-center gap-8 text-sm font-medium">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services" class="nav-link">Services</a>
+        <a href="packages" class="nav-link">Packages</a>
+        <a href="about" class="nav-link">About</a>
+        <a href="contact" class="nav-link">Contact</a>
       </nav>
 
-      <a href="consult.html"
-         class="flex h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold items-center justify-center rounded-lg transition-colors">
+      <a href="consult"
+         class="h-10 px-6 flex items-center justify-center bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition">
         Request Consultation
       </a>
     </div>
 
-    <!-- Mobile Hamburger -->
+    <!-- MOBILE MENU BUTTON -->
     <button onclick="toggleMenu()" class="md:hidden">
-      <span class="material-symbols-outlined text-[28px]">menu</span>
+      <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
+
   </div>
 
   <!-- MOBILE MENU -->
-<div id="mobile-menu"
-     class="hidden md:hidden bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-[#2a3441]">
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <nav class="flex flex-col">
+      <a href="index.html" class="px-6 py-4">Home</a>
+      <a href="services" class="px-6 py-4">Services</a>
+      <a href="packages" class="px-6 py-4">Packages</a>
+      <a href="about" class="px-6 py-4">About</a>
+      <a href="contact" class="px-6 py-4">Contact</a>
+    </nav>
 
-  <nav class="flex flex-col divide-y divide-[#f0f2f4] dark:divide-[#2a3441]">
-
-    <a href="index.html" class="px-4 py-4 text-base font-medium hover:bg-background-light dark:hover:bg-[#1b2633]">
-      Home
-    </a>
-
-    <a href="services.html" class="px-4 py-4 text-base font-medium hover:bg-background-light dark:hover:bg-[#1b2633]">
-      Services
-    </a>
-
-    <a href="packages.html" class="px-4 py-4 text-base font-medium hover:bg-background-light dark:hover:bg-[#1b2633]">
-      Packages
-    </a>
-
-    <a href="about.html" class="px-4 py-4 text-base font-medium hover:bg-background-light dark:hover:bg-[#1b2633]">
-      About
-    </a>
-
-    <a href="contact.html" class="px-4 py-4 text-base font-medium hover:bg-background-light dark:hover:bg-[#1b2633]">
-      Contact
-    </a>
-  </nav>
-
-  <div class="p-4">
-    <a href="consult.html"
-       class="flex w-full h-12 bg-primary hover:bg-primary/90 text-white text-base font-bold items-center justify-center rounded-xl shadow-lg">
-      Request Consultation
-    </a>
+    <div class="p-4">
+      <a href="consult"
+         class="flex h-12 bg-primary text-white font-bold items-center justify-center rounded-xl">
+        Request Consultation
+      </a>
+    </div>
   </div>
-</div>
+</header>
+
 <div class="relative bg-white dark:bg-background-dark py-12 md:py-20 px-4 md:px-10 flex justify-center">
 <div class="max-w-7xl w-full flex flex-col md:flex-row gap-10 items-center">
 <div class="flex-1 flex flex-col gap-6 md:gap-8 text-center md:text-left">
 <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-[-0.033em] text-[#111418] dark:text-white">
-                    Designing Thoughtful Spaces for Modern Living
+                    Designing Thoughtful Spaces for Modern Living 
                 </h1>
 <p class="text-base md:text-lg text-[#637588] dark:text-gray-300 font-normal leading-relaxed">
-                    We are an architectural firm specializing in interior and exterior design, creating functional, aesthetic, and vastu-aligned spaces tailored to your lifestyle.
+                    Vastuveda Designs an architectural firm specializing in interior and exterior design, creating functional, aesthetic, and vastu-aligned spaces tailored to your lifestyle.
                 </p>
 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-<button onclick="window.location.href='consult.html';"
+<button onclick="window.location.href='consult';"
         class="flex h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold items-center justify-center rounded-lg transition-colors shadow-lg shadow-blue-500/20">
     Request a Design Consultation
 </button>
 
-<button class="flex h-12 px-6 bg-[#f0f2f4] hover:bg-[#e0e2e4] dark:bg-[#2a3441] dark:hover:bg-[#3a4451] text-[#111418] dark:text-white text-base font-bold items-center justify-center rounded-lg transition-colors">
-                        Talk to an Architect
-                    </button>
+<a href="https://wa.me/9779860476013"
+   target="_blank"
+   class="flex h-12 px-6 bg-[#25D366] hover:bg-[#20bd5a] text-white text-base font-bold items-center justify-center rounded-lg transition-colors shadow-lg">
+  Talk to an Architect
+</a>
+
 </div>
 </div>
 <div class="flex-1 w-full">
-<div class="w-full aspect-[4/3] rounded-xl bg-center bg-cover shadow-2xl" data-alt="Modern living room with large windows and minimalist furniture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJydcz4Yg6foHVi_Z369EeTGYkljSk20t5XKXFA6tTYgJaGu4oqgnAL25cD3n0fCDkjyLRzCxo7TnpxxpLCJ3XrNa7oi8uG3oPHAoxPqM0RVcpd4GVWbTXXczayEFxXY18YaWIcEJu2ILE730gjrxDNx_hg3ZsW0rOa4MwzfT-Ey4a2CL3wV4kOGgs04YUxeFnDUHhj1Wom8Jg_NOYYqruTxIE4iZ8kDVFG0yC0-8vQeHVktd_g2tILXkJWp4nEtjQdbSwdkr_iG40");'>
+<div class="w-full aspect-[4/3] rounded-xl bg-center bg-cover shadow-2xl" data-alt="Modern living room interior design by Vastuveda Designs in Nepal" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJydcz4Yg6foHVi_Z369EeTGYkljSk20t5XKXFA6tTYgJaGu4oqgnAL25cD3n0fCDkjyLRzCxo7TnpxxpLCJ3XrNa7oi8uG3oPHAoxPqM0RVcpd4GVWbTXXczayEFxXY18YaWIcEJu2ILE730gjrxDNx_hg3ZsW0rOa4MwzfT-Ey4a2CL3wV4kOGgs04YUxeFnDUHhj1Wom8Jg_NOYYqruTxIE4iZ8kDVFG0yC0-8vQeHVktd_g2tILXkJWp4nEtjQdbSwdkr_iG40");'>
 </div>
 </div>
 </div>
@@ -178,7 +235,7 @@
 <h2 class="text-3xl md:text-4xl font-black leading-tight tracking-[-0.033em] text-[#111418] dark:text-white mb-2">Packages Preview</h2>
 <p class="text-base text-[#637588] dark:text-gray-400">Transparent pricing for every stage of your project.</p>
 </div>
-<a class="text-primary font-bold hover:underline flex items-center gap-1" href="packages.html">View Full Packages <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+<a class="text-primary font-bold hover:underline flex items-center gap-1" href="packages">View Full Packages <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div class="flex flex-col gap-6 rounded-xl border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] p-8 hover:border-primary/50 transition-colors">
@@ -194,9 +251,13 @@
 <li class="flex gap-2 items-center"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Furniture Placement</li>
 <li class="flex gap-2 items-center"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 1 Revision Round</li>
 </ul>
-<button class="mt-auto w-full h-10 rounded-lg bg-[#f0f2f4] dark:bg-[#2a3441] hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] text-[#111418] dark:text-white text-sm font-bold transition-colors">
-                        View Details
-                    </button>
+<a 
+  href="/packages"
+  class="mt-auto w-full h-10 rounded-lg bg-[#f0f2f4] dark:bg-[#2a3441] hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] text-[#111418] dark:text-white text-sm font-bold transition-colors inline-flex items-center justify-center"
+>
+  View Details
+</a>
+
 </div>
 <div class="flex flex-col gap-6 rounded-xl border-2 border-primary bg-white dark:bg-[#1a232e] p-8 relative shadow-lg shadow-blue-500/5">
 <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold uppercase px-3 py-1 rounded-full tracking-wide">Best Seller</div>
@@ -213,9 +274,14 @@
 <li class="flex gap-2 items-center"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Vastu Consultation</li>
 <li class="flex gap-2 items-center"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 2 Revision Rounds</li>
 </ul>
-<button class="mt-auto w-full h-10 rounded-lg bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors">
-                        View Details
-                    </button>
+
+<a 
+  href="/packages"
+  class="mt-auto w-full h-10 rounded-lg  bg-primary hover:bg-primary/90 text-white text-sm font-bold transition-colors inline-flex items-center justify-center"
+>
+  View Details
+</a>
+
 </div>
 <div class="flex flex-col gap-6 rounded-xl border border-[#dbe0e6] dark:border-[#2a3441] bg-white dark:bg-[#1a232e] p-8 hover:border-primary/50 transition-colors">
 <div class="flex flex-col gap-2">
@@ -231,9 +297,13 @@
 <li class="flex gap-2 items-center"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Unlimited Revisions</li>
 <li class="flex gap-2 items-center"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Site Supervision</li>
 </ul>
-<button class="mt-auto w-full h-10 rounded-lg bg-[#f0f2f4] dark:bg-[#2a3441] hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] text-[#111418] dark:text-white text-sm font-bold transition-colors">
-                        View Details
-                    </button>
+<a 
+  href="/packages"
+  class="mt-auto w-full h-10 rounded-lg bg-[#f0f2f4] dark:bg-[#2a3441] hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] text-[#111418] dark:text-white text-sm font-bold transition-colors inline-flex items-center justify-center"
+>
+  View Details
+</a>
+
 </div>
 </div>
 </div>
@@ -312,7 +382,7 @@
 <div class="flex items-center gap-3 mt-auto pt-2">
 <div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of a smiling woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDrpdulj-PuloHpyFjHSx2jwdZGphYiCuNd79mA9ySKZlL7j6VB1vnDUK1jyAd5Q4OVKRnPTL4lkT7Tk2bJzX00ygnNSZjgt3uHC98WU2e_GEIOQG6e5rS0I6aV4A50sb2wbiqmckSAp4tRxWAUc7-KgsJ4BQeg2ixCJbk_aWu-YZEV-1GoWIjIbN0yhP5zjdYJUYPHWMvVtXjPzhK3RLE9g7it0fQoJIrunFJSpXTwiUMP-TzlH9QQ6jGQFACi-sRuPh3SiMNKbezx");'></div>
 <div>
-<p class="text-sm font-bold text-[#111418] dark:text-white">Sakriya Shrestha</p>
+<p class="text-sm font-bold text-[#111418] dark:text-white">Deepika Khadka</p>
 <p class="text-xs text-[#637588] dark:text-gray-400">Homeowner</p>
 </div>
 </div>
@@ -329,7 +399,7 @@
 <div class="flex items-center gap-3 mt-auto pt-2">
 <div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of a man in business casual" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRnm3Ei3GoH06meD-ajzdr7-t_uMFBFrqju91qI_-x25jxVYACge7V1rtMbpbBXGUR4Km_yMcs0MNWI7riaixhXDUS5jkD27ppP6qGiWdYqjtdE2xEJ4Yz5MKV3F2L7ii0yWTwFJ4GZ5noBl5wB7fnuRlfscuuxza20jodBkMh8azTMfWIfN1gZBfqoMwTrIbJlX4jgxGceyNUzZnoGfbi5DY4i-0rRNjhjjdjT0rYDRCM1OJEpkSjBd48ceuHPRQaW24GTsqT1y1H");'></div>
 <div>
-<p class="text-sm font-bold text-[#111418] dark:text-white">Puja Chaudary</p>
+<p class="text-sm font-bold text-[#111418] dark:text-white">Anup Pandey</p>
 <p class="text-xs text-[#637588] dark:text-gray-400">Property Developer</p>
 </div>
 </div>
@@ -346,7 +416,7 @@
 <div class="flex items-center gap-3 mt-auto pt-2">
 <div class="w-10 h-10 rounded-full bg-cover bg-center" data-alt="Portrait of a young woman with glasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZzD7RrBcGbwJXz7zBGYKsLyF_xHVA_d7p3739C9jrmLSOuLLaJZ-BoDV3v7uJQCUN_tP9bO53P8awiU6TBm3ipYL0qb9li64LSA9xm6Ztxq_7mAC9wzC3X-gu49oZPp4s9rmHHrC3UcX7ThslTwOEGq8TZNU5mk1Qqzfh8X2LDQs-YIi7KShA6CxhMva72QV6KeI_1Iib95YpnBckqf_KoJzfh2dvyI2MQWeef6AvxkQkQYnZhFSiwTXEMp90Dq5xSANPVsr17AAv");'></div>
 <div>
-<p class="text-sm font-bold text-[#111418] dark:text-white">Anup Pandey</p>
+<p class="text-sm font-bold text-[#111418] dark:text-white">Puja Chaudary</p>
 <p class="text-xs text-[#637588] dark:text-gray-400">First-time Buyer</p>
 </div>
 </div>
@@ -354,49 +424,80 @@
 </div>
 </div>
 </div>
-<footer class="bg-white dark:bg-[#0b1219] border-t border-[#f0f2f4] dark:border-[#2a3441] py-12 px-4 md:px-10">
-<div class="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between gap-10">
-<div class="flex flex-col gap-4 max-w-sm">
-<div class="flex items-center gap-3 text-[#111418] dark:text-white">
-<div class="size-6 text-primary">
-<span class="material-symbols-outlined text-[24px]">architecture</span>
-</div>
-<h2 class="text-lg font-bold">VastuVeda</h2>
-</div>
-<p class="text-sm text-[#637588] dark:text-gray-400">Creating timeless spaces that blend functionality with artistic vision. Your dream home starts here.</p>
-<div class="flex gap-4 mt-2">
-<a class="text-[#637588] hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
-<a class="text-[#637588] hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
-</div>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-10">
-<div class="flex flex-col gap-3">
-<h4 class="font-bold text-[#111418] dark:text-white">Company</h4>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="about.html">About Us</a>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="#">Careers</a>
-</div>
-<div class="flex flex-col gap-3">
-<h4 class="font-bold text-[#111418] dark:text-white">Services</h4>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services.html">Architectural Design</a>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services.html">Interior Design</a>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services.html">Exterior Design</a> 
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services.html">Vastu Consultation</a>
-</div>
-<div class="flex flex-col gap-3">
-<h4 class="font-bold text-[#111418] dark:text-white">Contact</h4>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="contact.html">Get a Quote</a>
-<a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="consult.html">Consult our Architect</a>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#f0f2f4] dark:border-[#2a3441] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#637588] dark:text-gray-500">
-<p>© 2024 VastuVeda. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-primary" href="#">Privacy Policy</a>
-<a class="hover:text-primary" href="#">Terms of Service</a>
-</div>
-</div>
+<footer class="bg-white border-t border-[#f0f2f4]">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- TOP FOOTER -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- BRAND -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <img src="Company-logo.webp" alt="VastuVeda Logo" class="h-10 w-auto">
+          <span class="text-lg font-bold text-[#111418]">
+            VastuVeda Designs
+          </span>
+        </div>
+
+        <p class="text-sm text-gray-600 max-w-sm">
+          Creating timeless spaces that blend functionality with artistic vision.
+          Your dream home starts here.
+        </p>
+
+        <div class="flex gap-4 text-gray-600">
+          <a href="#" aria-label="Website">
+            <span class="material-symbols-outlined">language</span>
+          </a>
+          <a href="mailto:vastuveda.design@gmail.com" aria-label="Email">
+            <span class="material-symbols-outlined">mail</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- COMPANY -->
+      <div>
+        <h4 class="font-semibold mb-4">Company</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="about" class="hover:text-primary">About Us</a></li>
+          <li><a href="career" class="hover:text-primary">Careers</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+        <h4 class="font-semibold mb-4">Services</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li>Architectural Design</li>
+          <li>Interior Design</li>
+          <li>Exterior Design</li>
+          <li>Vastu Consultation</li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="consult" class="hover:text-primary">Get a Quote</a></li>
+          <li><a href="contact" class="hover:text-primary">Consult our Architect</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="border-t border-[#f0f2f4] mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+      <span>© 2024 VastuVeda. All rights reserved.</span>
+      <div class="flex gap-6">
+        <a href="Privacy-policy" class="hover:text-primary">Privacy Policy</a>
+        <a href="terms" class="hover:text-primary">Terms of Service</a>
+      </div>
+    </div>
+
+  </div>
 </footer>
+
 <script>
 function toggleMenu() {
   document.getElementById("mobile-menu").classList.toggle("hidden");
