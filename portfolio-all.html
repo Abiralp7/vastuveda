@@ -37,7 +37,6 @@
   </script>
 
   <style>
-    /* If nav-link is already defined globally elsewhere, you can remove this */
     .nav-link { color: #111418; }
     .nav-link:hover { color: #137fec; }
 
@@ -48,7 +47,7 @@
 
 <body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
 
-  <!-- ✅ HEADER (EXACTLY SAME AS index.html, with logo + same structure) -->
+  <!-- ✅ HEADER (same as your current portfolio-all.html) -->
   <header class="w-full bg-white border-b border-[#f0f2f4]">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
@@ -64,10 +63,7 @@
       <div class="hidden md:flex items-center gap-8">
         <nav class="flex items-center gap-8 text-sm font-medium">
           <a href="index.html" class="nav-link">Home</a>
-
-          <!-- Portfolio link -->
           <a href="portfolio-all.html" class="nav-link">Portfolio</a>
-
           <a href="services" class="nav-link">Services</a>
           <a href="packages" class="nav-link">Packages</a>
           <a href="about" class="nav-link">About</a>
@@ -91,10 +87,7 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
       <nav class="flex flex-col">
         <a href="index.html" class="px-6 py-4">Home</a>
-
-        <!-- Portfolio link -->
         <a href="portfolio-all.html" class="px-6 py-4">Portfolio</a>
-
         <a href="services" class="px-6 py-4">Services</a>
         <a href="packages" class="px-6 py-4">Packages</a>
         <a href="about" class="px-6 py-4">About</a>
@@ -122,33 +115,56 @@
     </div>
   </div>
 
-  <!-- FILTER BAR -->
+  <!-- FILTER BAR (single page filter buttons) -->
   <div class="bg-white dark:bg-background-dark sticky top-0 z-10 border-b border-[#f0f2f4] dark:border-[#2a3441] px-4 md:px-10 flex justify-center py-4">
     <div class="max-w-7xl w-full flex items-center gap-4 overflow-x-auto no-scrollbar">
-      <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold whitespace-nowrap">All Projects</button>
-      <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Residential</button>
-      <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Interior</button>
-      <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Exterior</button>
-      <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Commercial</button>
+      <button data-filter="all" class="filter-btn px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+        All Projects
+      </button>
+      <button data-filter="residential" class="filter-btn px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+        Residential
+      </button>
+      <button data-filter="interior" class="filter-btn px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+        Interior
+      </button>
+      <button data-filter="exterior" class="filter-btn px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+        Exterior
+      </button>
+      <button data-filter="commercial" class="filter-btn px-5 py-2 rounded-full text-sm font-bold whitespace-nowrap">
+        Commercial
+      </button>
     </div>
   </div>
 
   <!-- PORTFOLIO GRID -->
   <div class="bg-background-light dark:bg-[#0b1219] py-12 px-4 md:px-10 flex justify-center min-h-[800px]">
     <div class="max-w-7xl w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+      <!-- Optional: shows when nothing found -->
+      <div id="empty-state" class="hidden text-center py-24">
+        <h3 class="text-xl font-bold text-[#111418] dark:text-white">No projects found</h3>
+        <p class="text-sm text-[#637588] dark:text-gray-400 mt-2">Try another category.</p>
+      </div>
+
+      <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- INTERIOR -->
+        <div class="portfolio-item group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+             data-category="interior">
           <div class="relative aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                  data-alt="Modern minimalist living room"
                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJydcz4Yg6foHVi_Z369EeTGYkljSk20t5XKXFA6tTYgJaGu4oqgnAL25cD3n0fCDkjyLRzCxo7TnpxxpLCJ3XrNa7oi8uG3oPHAoxPqM0RVcpd4GVWbTXXczayEFxXY18YaWIcEJu2ILE730gjrxDNx_hg3ZsW0rOa4MwzfT-Ey4a2CL3wV4kOGgs04YUxeFnDUHhj1Wom8Jg_NOYYqruTxIE4iZ8kDVFG0yC0-8vQeHVktd_g2tILXkJWp4nEtjQdbSwdkr_iG40");'></div>
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Interior</span>
+              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">
+                Interior
+              </span>
             </div>
           </div>
           <div class="p-6 pt-2">
-            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">The Serenity Villa</h3>
+            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+              The Serenity Villa
+            </h3>
             <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">person</span>
               Lead Architect: Arjun Sharma
@@ -156,17 +172,23 @@
           </div>
         </div>
 
-        <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <!-- EXTERIOR -->
+        <div class="portfolio-item group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+             data-category="exterior">
           <div class="relative aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                  data-alt="Contemporary facade of a residential building"
                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoMEA0RwOguslRUcnP8gvLZtTcbArwMnCb-kgVpulhwTJr3GkODCX7rqSG8MivBlg9LDnn1ibl4SO6lIQNg9XmzJczwbej8dIlkJfPCnp5KQzXNqbqIzcyUJLcriH9-sO5lTilNDMnMIEAbl2EBePCEB4cUqivhholYOyl3Bv28iGy0GGLC9lHmN-ZbA5L8jKn6Jrd7LkmgTQdAwZyspbAH9Vi80O75T3iitUnftX8fuVEbiIsBx_Jl2GftzXQ-HyHcStMClc1PR8t");'></div>
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Exterior</span>
+              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">
+                Exterior
+              </span>
             </div>
           </div>
           <div class="p-6 pt-2">
-            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Skyline Residence</h3>
+            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+              Skyline Residence
+            </h3>
             <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">person</span>
               Lead Architect: Meera Iyer
@@ -174,17 +196,23 @@
           </div>
         </div>
 
-        <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <!-- COMMERCIAL -->
+        <div class="portfolio-item group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+             data-category="commercial">
           <div class="relative aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                  data-alt="Luxury corporate office lobby"
                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRlL2YtU13yTKHeTl9x3LbB_fjPcRhJCxOii20v4ysPUbiIkQ4gl5V8gTI8DtSlxXAsK1C882ZZHr-Lakb5y1Hr-KbFi7vIjT1S7eQIwYyaZI-7bF32yP8KSYvauTHQfhYxrF5Nda3lS_whi-CWPs2_lGFHtLWEerqqqK5poVBr6flg63xEQpWBPW_Lu24nZB03mAUmkTge3jz5U0C3SZmW0ossO5YadEMeLNaC88EA65KG_EkNajuy6YWMBEjxvq4B9iqfhbEGUpD");'></div>
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Commercial</span>
+              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">
+                Commercial
+              </span>
             </div>
           </div>
           <div class="p-6 pt-2">
-            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Nexus Corporate Hub</h3>
+            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+              Nexus Corporate Hub
+            </h3>
             <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">person</span>
               Lead Architect: Vikram Goel
@@ -192,17 +220,23 @@
           </div>
         </div>
 
-        <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <!-- RESIDENTIAL -->
+        <div class="portfolio-item group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+             data-category="residential">
           <div class="relative aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                  data-alt="Detailed blueprint on drafting table"
                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGXQrltQ7hNOKdl_P9azVHcj4pXmXGeYrAcTxQzz5Tpr09c3eLgX3Hx53p4YtIYVoieGqYWWMabxYtb_PRFHCEEz3diwbcrCb6BfT-vacIjJ7Fv1dxrBC19imne8ap-OjXGcFLJ39ny3Zbg0bevVvcCQljr4SSJKSVHICLLvP1cDHHMp5MrCcfob20CQZppRznze7d4TOLhpE12PDUBUJKXuRzlUMznUo2AI-XrA8aC-uYTqc0MTU3BlrF1BfWK0utUfZGe2x3yeqj");'></div>
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Residential</span>
+              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">
+                Residential
+              </span>
             </div>
           </div>
           <div class="p-6 pt-2">
-            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">The Lotus Estate</h3>
+            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+              The Lotus Estate
+            </h3>
             <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">person</span>
               Lead Architect: Ananya Verma
@@ -210,17 +244,23 @@
           </div>
         </div>
 
-        <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <!-- INTERIOR -->
+        <div class="portfolio-item group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+             data-category="interior">
           <div class="relative aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                  data-alt="Modern apartment layout"
                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnN9REt0S9JwLI-4HF2NaN7t70-POx86BUxJtjfYBn46k3JkWdf3nfvyuD_DfilhJuoxVnjBFq5GhhybVq5kN4WgoVPldbvC0hHtm18m_DjSWGrcjQgFw-vWKjg95rqRK-kYg-ItiUGJeP19RGqBW_Ha0btStZHi9TKGV5s2a60FdqrKlWlPvodA57vJDHulzKoKz54XFLG6KY0ZEHSlLGtGEKmIUTPC0Bxqk_MAHPk2jQLt_6xbh5pK-nvMQi6wIurzeDq0kMLYxT");'></div>
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Interior</span>
+              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">
+                Interior
+              </span>
             </div>
           </div>
           <div class="p-6 pt-2">
-            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Urban Loft Retreat</h3>
+            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+              Urban Loft Retreat
+            </h3>
             <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">person</span>
               Lead Architect: Rohan Das
@@ -228,17 +268,23 @@
           </div>
         </div>
 
-        <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <!-- RESIDENTIAL -->
+        <div class="portfolio-item group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+             data-category="residential">
           <div class="relative aspect-[4/3] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
                  data-alt="Vastu inspired home entryway"
                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATqcirs_UmTpxxO4V6_N9MwcxX1xrFuRbFOjf5cAvqLklAt2p_uECQq_89_VQWhlQ9UOWF_OMShdiRdwtbdkgosLB37xyMGh0atHqj7Cjs48i2mWibhNXgrKhyPYXm63FrwwvlGJnUfXgQ8bUwAXPbo_6Pu5DdKug61RG7MHJS0mIuVCLBGkle0HBicq8qxkMY1_56d5yIzdOSsCsb9ApfjRqJDNdgRBc8EnczwEkZabJ00Uh1c_-zrS3vOwOos1NBEEwtsccme29b");'></div>
             <div class="absolute top-4 left-4">
-              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Residential</span>
+              <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">
+                Residential
+              </span>
             </div>
           </div>
           <div class="p-6 pt-2">
-            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Harmony Heritage House</h3>
+            <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">
+              Harmony Heritage House
+            </h3>
             <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
               <span class="material-symbols-outlined text-sm">person</span>
               Lead Architect: Priya Malhotra
@@ -253,10 +299,11 @@
           Load More Projects
         </button>
       </div>
+
     </div>
   </div>
 
-  <!-- FOOTER (same style as your homepage footer can be pasted here if you want) -->
+  <!-- FOOTER (same as yours) -->
   <footer class="bg-white border-t border-[#f0f2f4]">
     <div class="max-w-7xl mx-auto px-6 py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -327,6 +374,53 @@
     function toggleMenu() {
       document.getElementById("mobile-menu").classList.toggle("hidden");
     }
+
+    // ---- Filter logic (single page) ----
+    const buttons = Array.from(document.querySelectorAll(".filter-btn"));
+    const items = Array.from(document.querySelectorAll(".portfolio-item"));
+    const emptyState = document.getElementById("empty-state");
+
+    function setActiveButton(activeFilter) {
+      buttons.forEach(btn => {
+        const isActive = btn.dataset.filter === activeFilter;
+
+        // Active: primary bg + white text
+        if (isActive) {
+          btn.className = "filter-btn px-5 py-2 rounded-full bg-primary text-white text-sm font-bold whitespace-nowrap";
+        } else {
+          btn.className = "filter-btn px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap";
+        }
+      });
+    }
+
+    function applyFilter(filter) {
+      let visibleCount = 0;
+
+      items.forEach(item => {
+        const cat = item.dataset.category;
+        const show = (filter === "all") || (cat === filter);
+
+        item.style.display = show ? "" : "none";
+        if (show) visibleCount++;
+      });
+
+      emptyState.classList.toggle("hidden", visibleCount !== 0);
+      setActiveButton(filter);
+
+      // keep URL readable (optional)
+      const hash = (filter === "all") ? "" : "#" + filter;
+      history.replaceState(null, "", window.location.pathname + hash);
+    }
+
+    // Button clicks
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
+    });
+
+    // On load: read hash
+    const initial = (location.hash || "").replace("#", "") || "all";
+    const allowed = new Set(["all", "residential", "interior", "exterior", "commercial"]);
+    applyFilter(allowed.has(initial) ? initial : "all");
   </script>
 
 </body>
