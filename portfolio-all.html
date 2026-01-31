@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - VastuVeda Designs</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#137fec",
+        "background-light": "#f6f7f8",
+        "background-dark": "#101922",
+      },
+      fontFamily: {
+        "display": ["Manrope", "sans-serif"],
+        "body": ["Noto Sans", "sans-serif"]
+      },
+      borderRadius: {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+    },
+  },
+}
+</script>
+
+<style>
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111418] dark:text-white font-display">
+
+<!-- HEADER -->
+<div class="relative flex w-full flex-col bg-white dark:bg-background-dark border-b border-[#f0f2f4] dark:border-[#2a3441]">
+  <div class="px-4 md:px-10 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 text-[#111418] dark:text-white">
+      <div class="size-8 text-primary">
+        <span class="material-symbols-outlined text-[32px]">architecture</span>
+      </div>
+      <h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">VastuVeda Designs</h2>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8">
+      <nav class="flex items-center gap-6">
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+
+        <!-- ✅ Portfolio active -->
+        <a class="text-sm font-medium hover:text-primary transition-colors text-primary underline underline-offset-4" href="portfolio.html">Portfolio</a>
+
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="services">Services</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="packages">Packages</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="about">About</a>
+        <a class="text-sm font-medium hover:text-primary transition-colors" href="contact">Contact</a>
+      </nav>
+
+      <a href="consult" class="flex h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold items-center justify-center rounded-lg transition-colors">
+        Request Consultation
+      </a>
+    </div>
+
+    <div class="md:hidden text-[#111418] dark:text-white">
+      <span class="material-symbols-outlined">menu</span>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="bg-white dark:bg-background-dark pt-16 pb-8 px-4 md:px-10 flex justify-center">
+  <div class="max-w-7xl w-full flex flex-col gap-4 text-center md:text-left">
+    <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-[#111418] dark:text-white">
+      Our Portfolio
+    </h1>
+    <p class="text-lg text-[#637588] dark:text-gray-400 max-w-2xl">
+      A showcase of our finest architectural and interior design achievements. Each space is a blend of functionality, aesthetic excellence, and Vastu principles.
+    </p>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="bg-white dark:bg-background-dark sticky top-0 z-10 border-b border-[#f0f2f4] dark:border-[#2a3441] px-4 md:px-10 flex justify-center py-4">
+  <div class="max-w-7xl w-full flex items-center gap-4 overflow-x-auto no-scrollbar">
+    <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold whitespace-nowrap">All Projects</button>
+    <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Residential</button>
+    <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Interior</button>
+    <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Exterior</button>
+    <button class="px-5 py-2 rounded-full bg-[#f0f2f4] dark:bg-[#2a3441] text-[#111418] dark:text-white text-sm font-bold hover:bg-[#e0e2e4] dark:hover:bg-[#3a4451] transition-colors whitespace-nowrap">Commercial</button>
+  </div>
+</div>
+
+<!-- GRID -->
+<div class="bg-background-light dark:bg-[#0b1219] py-12 px-4 md:px-10 flex justify-center min-h-[800px]">
+  <div class="max-w-7xl w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+            data-alt="Modern minimalist living room"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJydcz4Yg6foHVi_Z369EeTGYkljSk20t5XKXFA6tTYgJaGu4oqgnAL25cD3n0fCDkjyLRzCxo7TnpxxpLCJ3XrNa7oi8uG3oPHAoxPqM0RVcpd4GVWbTXXczayEFxXY18YaWIcEJu2ILE730gjrxDNx_hg3ZsW0rOa4MwzfT-Ey4a2CL3wV4kOGgs04YUxeFnDUHhj1Wom8Jg_NOYYqruTxIE4iZ8kDVFG0yC0-8vQeHVktd_g2tILXkJWp4nEtjQdbSwdkr_iG40");'></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Interior</span>
+          </div>
+        </div>
+        <div class="p-6 pt-2">
+          <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">The Serenity Villa</h3>
+          <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">person</span>
+            Lead Architect: Arjun Sharma
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+            data-alt="Contemporary facade of a residential building"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoMEA0RwOguslRUcnP8gvLZtTcbArwMnCb-kgVpulhwTJr3GkODCX7rqSG8MivBlg9LDnn1ibl4SO6lIQNg9XmzJczwbej8dIlkJfPCnp5KQzXNqbqIzcyUJLcriH9-sO5lTilNDMnMIEAbl2EBePCEB4cUqivhholYOyl3Bv28iGy0GGLC9lHmN-ZbA5L8jKn6Jrd7LkmgTQdAwZyspbAH9Vi80O75T3iitUnftX8fuVEbiIsBx_Jl2GftzXQ-HyHcStMClc1PR8t");'></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Exterior</span>
+          </div>
+        </div>
+        <div class="p-6 pt-2">
+          <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Skyline Residence</h3>
+          <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">person</span>
+            Lead Architect: Meera Iyer
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+            data-alt="Luxury corporate office lobby"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBRlL2YtU13yTKHeTl9x3LbB_fjPcRhJCxOii20v4ysPUbiIkQ4gl5V8gTI8DtSlxXAsK1C882ZZHr-Lakb5y1Hr-KbFi7vIjT1S7eQIwYyaZI-7bF32yP8KSYvauTHQfhYxrF5Nda3lS_whi-CWPs2_lGFHtLWEerqqqK5poVBr6flg63xEQpWBPW_Lu24nZB03mAUmkTge3jz5U0C3SZmW0ossO5YadEMeLNaC88EA65KG_EkNajuy6YWMBEjxvq4B9iqfhbEGUpD");'></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Commercial</span>
+          </div>
+        </div>
+        <div class="p-6 pt-2">
+          <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Nexus Corporate Hub</h3>
+          <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">person</span>
+            Lead Architect: Vikram Goel
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+            data-alt="Detailed blueprint on drafting table"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGXQrltQ7hNOKdl_P9azVHcj4pXmXGeYrAcTxQzz5Tpr09c3eLgX3Hx53p4YtIYVoieGqYWWMabxYtb_PRFHCEEz3diwbcrCb6BfT-vacIjJ7Fv1dxrBC19imne8ap-OjXGcFLJ39ny3Zbg0bevVvcCQljr4SSJKSVHICLLvP1cDHHMp5MrCcfob20CQZppRznze7d4TOLhpE12PDUBUJKXuRzlUMznUo2AI-XrA8aC-uYTqc0MTU3BlrF1BfWK0utUfZGe2x3yeqj");'></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Residential</span>
+          </div>
+        </div>
+        <div class="p-6 pt-2">
+          <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">The Lotus Estate</h3>
+          <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">person</span>
+            Lead Architect: Ananya Verma
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+            data-alt="Modern apartment layout"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnN9REt0S9JwLI-4HF2NaN7t70-POx86BUxJtjfYBn46k3JkWdf3nfvyuD_DfilhJuoxVnjBFq5GhhybVq5kN4WgoVPldbvC0hHtm18m_DjSWGrcjQgFw-vWKjg95rqRK-kYg-ItiUGJeP19RGqBW_Ha0btStZHi9TKGV5s2a60FdqrKlWlPvodA57vJDHulzKoKz54XFLG6KY0ZEHSlLGtGEKmIUTPC0Bxqk_MAHPk2jQLt_6xbh5pK-nvMQi6wIurzeDq0kMLYxT");'></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Interior</span>
+          </div>
+        </div>
+        <div class="p-6 pt-2">
+          <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Urban Loft Retreat</h3>
+          <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">person</span>
+            Lead Architect: Rohan Das
+          </p>
+        </div>
+      </div>
+
+      <div class="group flex flex-col gap-4 bg-white dark:bg-[#1a232e] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+        <div class="relative aspect-[4/3] overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-500"
+            data-alt="Vastu inspired home entryway"
+            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuATqcirs_UmTpxxO4V6_N9MwcxX1xrFuRbFOjf5cAvqLklAt2p_uECQq_89_VQWhlQ9UOWF_OMShdiRdwtbdkgosLB37xyMGh0atHqj7Cjs48i2mWibhNXgrKhyPYXm63FrwwvlGJnUfXgQ8bUwAXPbo_6Pu5DdKug61RG7MHJS0mIuVCLBGkle0HBicq8qxkMY1_56d5yIzdOSsCsb9ApfjRqJDNdgRBc8EnczwEkZabJ00Uh1c_-zrS3vOwOos1NBEEwtsccme29b");'></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 dark:bg-black/80 backdrop-blur-sm text-[10px] font-bold uppercase tracking-wider rounded text-primary">Residential</span>
+          </div>
+        </div>
+        <div class="p-6 pt-2">
+          <h3 class="text-xl font-bold text-[#111418] dark:text-white group-hover:text-primary transition-colors">Harmony Heritage House</h3>
+          <p class="text-sm text-[#637588] dark:text-gray-400 mt-2 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">person</span>
+            Lead Architect: Priya Malhotra
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-16 flex justify-center">
+      <button class="flex h-12 px-8 bg-white dark:bg-[#1a232e] border border-[#dbe0e6] dark:border-[#2a3441] hover:border-primary text-[#111418] dark:text-white text-base font-bold items-center justify-center rounded-lg transition-all shadow-sm">
+        Load More Projects
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="bg-primary py-16 px-4 md:px-10 flex justify-center">
+  <div class="max-w-7xl w-full flex flex-col items-center gap-8 text-center text-white">
+    <h2 class="text-3xl md:text-4xl font-black tracking-tight">Ready to build your dream space?</h2>
+    <p class="text-lg opacity-90 max-w-2xl">Connect with our senior architects today to discuss your vision and how VastuVeda can bring it to life.</p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="consult" class="bg-white text-primary px-8 h-12 rounded-lg font-bold hover:bg-background-light transition-colors inline-flex items-center justify-center">
+        Start Your Project
+      </a>
+      <a href="consult" class="border-2 border-white text-white px-8 h-12 rounded-lg font-bold hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center">
+        Schedule Consultation
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-white dark:bg-[#0b1219] border-t border-[#f0f2f4] dark:border-[#2a3441] py-12 px-4 md:px-10">
+  <div class="max-w-7xl w-full mx-auto flex flex-col md:flex-row justify-between gap-10">
+    <div class="flex flex-col gap-4 max-w-sm">
+      <div class="flex items-center gap-3 text-[#111418] dark:text-white">
+        <div class="size-6 text-primary">
+          <span class="material-symbols-outlined text-[24px]">architecture</span>
+        </div>
+        <h2 class="text-lg font-bold">VastuVeda Designs</h2>
+      </div>
+      <p class="text-sm text-[#637588] dark:text-gray-400">Creating timeless spaces that blend functionality with artistic vision. Your dream home starts here.</p>
+      <div class="flex gap-4 mt-2">
+        <a class="text-[#637588] hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+        <a class="text-[#637588] hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-10">
+      <div class="flex flex-col gap-3">
+        <h4 class="font-bold text-[#111418] dark:text-white">Company</h4>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="about">About Us</a>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="career">Careers</a>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="#">Press</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <h4 class="font-bold text-[#111418] dark:text-white">Services</h4>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services">Residential</a>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services">Commercial</a>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="services">Landscape</a>
+      </div>
+      <div class="flex flex-col gap-3">
+        <h4 class="font-bold text-[#111418] dark:text-white">Contact</h4>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="consult">Get a Quote</a>
+        <a class="text-sm text-[#637588] dark:text-gray-400 hover:text-primary" href="contact">Support</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#f0f2f4] dark:border-[#2a3441] flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#637588] dark:text-gray-500">
+    <p>© 2024 VastuVeda Designs. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a class="hover:text-primary" href="Privacy-policy">Privacy Policy</a>
+      <a class="hover:text-primary" href="terms">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
